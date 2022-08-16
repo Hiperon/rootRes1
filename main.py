@@ -3,6 +3,8 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import rootf
+import vis
+import stat
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -21,4 +23,15 @@ def main():
     data = rootf.Rootf("results1_short100_coincidences.root")
     array_time = data.get_arr("time1")
     print(array_time)
+    vis.plt_arr(array_time)
+
+    time1_arr = data.get_arr("time1")
+    time2_arr = data.get_arr("time2")
+    energy1_arr = data.get_arr("energy1")
+    energy2_arr = data.get_arr("energy2")
+    print(time1_arr[-3])
+    print(time2_arr[-3])
+    print(energy1_arr[-3])
+    print(energy2_arr[-3])
+    stat.mmm(energy1_arr)
 main()

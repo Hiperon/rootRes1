@@ -10,5 +10,5 @@ class Rootf:
 
     def get_arr(self, arr):
         with self._open_f() as file:
-            return file["Coincidences"]["time1"].array()
+            return file["Coincidences"][arr].array()
 
