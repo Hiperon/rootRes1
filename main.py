@@ -4,7 +4,8 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import rootf
 import vis
-import stat
+import rstat
+from numpy import median
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -33,5 +34,5 @@ def main():
     print(time2_arr[-3])
     print(energy1_arr[-3])
     print(energy2_arr[-3])
-    stat.mmm(energy1_arr)
+    rstat.mmm(energy1_arr)
 main()
