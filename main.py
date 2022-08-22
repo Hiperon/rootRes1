@@ -5,7 +5,7 @@
 import rootf
 import vis
 import rstat
-from numpy import median
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -17,12 +17,12 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 
-
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 def main():
     print("start")
     data = rootf.Rootf("results1_short100_coincidences.root")
     array_time = data.get_arr("time1")
+    print(type(array_time))
     print(array_time)
     vis.plt_arr(array_time)
 
@@ -35,4 +35,6 @@ def main():
     print(energy1_arr[-3])
     print(energy2_arr[-3])
     rstat.mmm(energy1_arr)
+
+
 main()

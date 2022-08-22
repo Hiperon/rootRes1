@@ -1,3 +1,10 @@
+"""Stats for data got from root datatype
+
+For now, it's working on simple array, stripped from root by other modules.
+
+Functions exported by rstat.py:
+    * mmm - write minimum, median and maximum from array that can be ordered.
+"""
 from numpy import median
 
 
