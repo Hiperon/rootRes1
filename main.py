@@ -2,7 +2,10 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import numpy
+
 from jupiter_root import *
+import awkward
 
 
 def print_hi(name):
@@ -20,9 +23,15 @@ def main():
     print("start")
     data = rootf.Rootf("results1_short100_coincidences.root")
     array_time = data.get_arr("time1")
+    array_energy = data.get_arr("energy1")
     print(type(array_time))
+    print(*array_time)
+    print(array_time[5])
     print(array_time)
-    vis.plt_arr(array_time)
+
+    vis.distribution_arr(array_time)
+    print(*array_energy)
+    vis.distribution_arr(array_energy)
 
     time1_arr = data.get_arr("time1")
     time2_arr = data.get_arr("time2")
