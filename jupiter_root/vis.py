@@ -1,7 +1,8 @@
 """Module for basic visualization of data
 
 Functions exported by vis.py:
-    *   plt_arr - Draw base plot from one dimension data to STDOUT"""
+    *   plt_arr - Draw base plot from one dimension data to STDOUT
+    *   Draw distribution with n points"""
 import matplotlib.pyplot as plt
 
 
@@ -14,7 +15,7 @@ def plt_arr(array):
     plt.show()
 
 def distribution_arr(array, n=10):
-    """Draw distribution from array, it will have n points
+    """Draw distribution with n points
 
     :param array: one dimensional awkward array of numbers
     :param n: default 10, number of points on graph
